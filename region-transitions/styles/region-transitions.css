@@ -1,0 +1,18 @@
+/* Basic styling for the config form */
+.region-transitions .form-group {
+  margin-bottom: 0.5rem;
+}
+.region-transitions .form-group label {
+  font-weight: bold;
+}
+.region-transitions .hint {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.2rem;
+}
+.region-transitions .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}

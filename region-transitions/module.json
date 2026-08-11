@@ -1,0 +1,40 @@
+{
+  "id": "region-transitions",
+  "title": "Region Transitions",
+  "description": "Reusable transition regions for Foundry VTT – perfect for stairs, portals, elevators, and teleport traps.",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13.351"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "5.2.5",
+          "verified": "5.2.5"
+        }
+      }
+    ],
+    "requires": [
+      {
+        "id": "levels",
+        "type": "module",
+        "compatibility": {}
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Your Name + ChatGPT"
+    }
+  ],
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "styles": [
+    "styles/region-transitions.css"
+  ]
+}
