@@ -1,1 +1,0 @@
-console.log("TEST: region-transitions test.js loaded");

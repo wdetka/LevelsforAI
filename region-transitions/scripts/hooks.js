@@ -22,49 +22,49 @@ Hooks.on("renderRegionConfig", (app, html, data) => {
 
   // Build the HTML for our settings
   const htmlContent = `
-  <div data-region-transitions style="margin-top: 12px; padding: 8px; border-top: 1px solid #444;">
-    <h4 style="margin: 0 0 8px 0; font-size: 14px;">
-      <i class="fas fa-stairs"></i> Transition Settings
-    </h4>
+<div data-region-transitions style="margin-top: 12px; padding: 8px; border-top: 1px solid #444;">
+  <h4 style="margin: 0 0 8px 0; font-size: 14px;">
+    <i class="fas fa-stairs"></i> Transition Settings
+  </h4>
 
-    <div class="form-group" style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-      <label style="flex: 0 0 auto;">Enable Transition</label>
-      <input type="checkbox" name="flags.${MODULE_ID}.${FLAGS.ENABLED}" ${enabled ? 'checked' : ''} style="flex: 0 0 auto;">
-      <span class="hint" style="margin-left: 8px;">When a token enters this region, trigger a transition.</span>
-    </div>
-
-    <div class="form-group" style="margin-bottom: 8px;">
-      <label>Destination Region</label>
-      <select name="flags.${MODULE_ID}.${FLAGS.DESTINATION_REGION_ID}">
-        <option value="">— None —</option>
-        ${allRegions.map(r => 
-          `<option value="${r.id}" ${r.id === destRegionId ? 'selected' : ''}>${r.name}</option>`
-        ).join('')}
-      </select>
-      <p class="hint">The region where tokens will be teleported.</p>
-    </div>
-
-    <div class="form-group" style="margin-bottom: 8px;">
-      <label>Exit Distance (grid units)</label>
-      <input type="number" name="flags.${MODULE_ID}.${FLAGS.EXIT_DISTANCE}" 
-             value="${exitDistance}" step="1" min="0" style="width: 60px;">
-      <p class="hint">How far beyond the destination region the token should appear.</p>
-    </div>
-
-    <div class="form-group" style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-      <label style="flex: 0 0 auto;">Ask Confirmation</label>
-      <input type="checkbox" name="flags.${MODULE_ID}.${FLAGS.CONFIRM}" ${confirm ? 'checked' : ''} style="flex: 0 0 auto;">
-      <span class="hint" style="margin-left: 8px;">If unchecked, transition happens instantly.</span>
-    </div>
-
-    <div class="form-group" style="margin-bottom: 8px;">
-      <label>Elevation</label>
-      <input type="number" name="flags.${MODULE_ID}.${FLAGS.ELEVATION}" 
-             value="${elevation}" step="1" style="width: 60px;">
-      <p class="hint">The elevation to set after transition (requires Levels module).</p>
-    </div>
+  <div class="form-group" style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+    <label style="flex: 0 0 auto;">Enable Transition</label>
+    <input type="checkbox" name="flags.${MODULE_ID}.${FLAGS.ENABLED}" ${enabled ? 'checked' : ''} style="flex: 0 0 auto;">
+    <span class="hint" style="margin-left: 8px;">When a token enters this region, trigger a transition.</span>
   </div>
-  `;
+
+  <div class="form-group" style="margin-bottom: 8px;">
+    <label>Destination Region</label>
+    <select name="flags.${MODULE_ID}.${FLAGS.DESTINATION_REGION_ID}">
+      <option value="">— None —</option>
+      ${allRegions.map(r => 
+        `<option value="${r.id}" ${r.id === destRegionId ? 'selected' : ''}>${r.name}</option>`
+      ).join('')}
+    </select>
+    <p class="hint">The region where tokens will be teleported.</p>
+  </div>
+
+  <div class="form-group" style="margin-bottom: 8px;">
+    <label>Exit Distance (grid units)</label>
+    <input type="number" name="flags.${MODULE_ID}.${FLAGS.EXIT_DISTANCE}" 
+           value="${exitDistance}" step="1" min="0" style="width: 60px;">
+    <p class="hint">How far beyond the destination region the token should appear.</p>
+  </div>
+
+  <div class="form-group" style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+    <label style="flex: 0 0 auto;">Ask Confirmation</label>
+    <input type="checkbox" name="flags.${MODULE_ID}.${FLAGS.CONFIRM}" ${confirm ? 'checked' : ''} style="flex: 0 0 auto;">
+    <span class="hint" style="margin-left: 8px;">If unchecked, transition happens instantly.</span>
+  </div>
+
+  <div class="form-group" style="margin-bottom: 8px;">
+    <label>Elevation</label>
+    <input type="number" name="flags.${MODULE_ID}.${FLAGS.ELEVATION}" 
+           value="${elevation}" step="1" style="width: 60px;">
+    <p class="hint">The elevation to set after transition (requires Levels module).</p>
+  </div>
+</div>
+`;
 
   // Find the Behaviors tab content
   const behaviorsTab = html.querySelector('[data-tab="behaviors"]');
