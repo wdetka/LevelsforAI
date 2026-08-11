@@ -32,7 +32,9 @@
     }
   ],
   "esmodules": [
-    "scripts/main.js"
+  "scripts/main.js",
+  "scripts/region-config.js",
+  "scripts/test.js"
   ],
   "styles": [
     "styles/region-transitions.css"

@@ -1,11 +1,12 @@
-// scripts/main.js
+console.log("Region Transitions | main.js loaded");
+
 import "./settings.js";
 import "./hooks.js";
 import { TransitionRegionConfig } from "./region-config.js";
 
 Hooks.once("init", () => {
-  // Override the default RegionConfig with our custom one
-  CONFIG.Region.sheetClasses.base['core.RegionConfig'].cls = TransitionRegionConfig;
+  console.log("Region Transitions | init hook firing");
+  CONFIG.Region.sheetClasses.base['core.RegionConfig'] = TransitionRegionConfig;
 });
 
 Hooks.once("ready", () => {
