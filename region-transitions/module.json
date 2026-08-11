@@ -31,10 +31,8 @@
       "name": "Your Name + ChatGPT"
     }
   ],
-  "esmodules": [
-  "scripts/main.js",
-  "scripts/region-config.js",
-  "scripts/test.js"
+ "esmodules": [
+  "scripts/main.js"
   ],
   "styles": [
     "styles/region-transitions.css"
